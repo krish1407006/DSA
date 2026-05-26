@@ -34,9 +34,39 @@
 using namespace std;
 
 int main() {
+
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
+
+
+    float Pi = 3.14;
+    cout << "Pi: " << Pi << endl;
+
+    bool student = true;
+    cout << "Is student: " << student << endl; // true is represented as 1 in C++ and
+    // false is represented as 0
+
+    double largeNumber = 123456789.12345;
+    cout << "Large Number: " << largeNumber << endl;
+    
+
+    int a , b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << "Sum: " << a + b << endl;
+
+
+    
+
+
+
     cout << "Hello, World!" << endl;
     return 0;
 }
+
+ 
+
 
 // hello
 
