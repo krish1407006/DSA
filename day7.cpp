@@ -16,16 +16,31 @@ using namespace std;
 
 
 
-    int sum(int a, int b ) {
-        cout << "Sum: " << a + b << endl;
-        return a + b;
+    // int sum(int a, int b ) {
+    //     cout << "Sum: " << a + b << endl;
+    //     return a + b;
 
 
+    // }
+    // int main() {
+    //     cout << "Enter two numbers: ";
+    //     int a, b;
+    //     cin >> a >> b;
+    //     sum(a, b);
+    //     return 0;
+    // }
+
+
+
+int main() {
+    int salary;
+    cout << "amount of salary: ";
+    cin >> salary;
+
+    if (salary > 50000) {
+        cout << "High salary" << endl;
+    } else {
+        cout << "Average salary" << endl;
     }
-    int main() {
-        cout << "Enter two numbers: ";
-        int a, b;
-        cin >> a >> b;
-        sum(a, b);
-        return 0;
-    }
+    return 0;
+}
