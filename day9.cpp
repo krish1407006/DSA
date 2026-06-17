@@ -19,13 +19,15 @@ int nums[] = { 10, 20, -15, -40, 50 };
 int size = 5;
 
 int smallest = INT_MAX;
+int largest = INT_MIN;
 for (int i = 0; i < size; i++) {
-if (nums[i] < smallest) {
-    smallest = nums[i];
 
+        largest = max(nums[i], largest);
+        smallest = min(nums[i], smallest);
 }
-}
+
 cout << "Smallest number so far: " << smallest << endl;
+cout << "Largest number so far: " << largest << endl;
     return 0;
 
 }
