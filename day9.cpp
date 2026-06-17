@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int main() {
+// int main() {
 
 //     int arr[5];
 
@@ -14,20 +14,37 @@ int main() {
 
 
 
-int nums[] = { 10, 20, -15, -40, 50 };
+// int nums[] = { 10, 20, -15, -40, 50 };
 
-int size = 5;
+// int size = 5;
 
-int smallest = INT_MAX;
-int largest = INT_MIN;
-for (int i = 0; i < size; i++) {
+// int smallest = INT_MAX;
+// int largest = INT_MIN;
+// for (int i = 0; i < size; i++) {
 
-        largest = max(nums[i], largest);
-        smallest = min(nums[i], smallest);
+//         largest = max(nums[i], largest);
+//         smallest = min(nums[i], smallest);
+// }
+
+// cout << "Smallest number so far: " << smallest << endl;
+// cout << "Largest number so far: " << largest << endl;
+//     return 0;
+
+void changearr(int arr[], int size) {
+    cout << "in function: ";
+    for (int i = 0; i < size; i++) {
+        arr[i] += 2* arr[i];
+    }
 }
 
-cout << "Smallest number so far: " << smallest << endl;
-cout << "Largest number so far: " << largest << endl;
-    return 0;
-
+int main() {
+    int arr[] = {1 , 2 , 3 , 4 , 5};
+    changearr(arr, 3);
+    cout << "\n in main : " << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+    
+ 
+        return 0;
 }
