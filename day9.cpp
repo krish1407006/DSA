@@ -6,10 +6,11 @@ int main() {
     int arr[5];
 
     int marks [5] = { 90, 80, 70, 60, 50 };
-    printf("Marks of students are: \n");
+   cout << "Size of marks array: " << sizeof(marks) << endl;
     for (int i = 0; i < 5; i++) {
-        printf("%d ", marks[i]);
+        cout << marks[i] << " ";
     }
-    
+    cout << sizeof(marks) << endl;
+
     return 0;
 }
