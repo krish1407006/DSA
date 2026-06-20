@@ -1,13 +1,18 @@
-//vector in cpp
+// vector in cpp
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int main () {
+int main()
+{
 
-    vector<int> vec = {1, 2, 3};
-    cout<< vec[1] << endl;
+    vector<int> vec (5, 0);
+
+    cout << vec[0] << endl;
+    cout << vec[1] << endl;
+    cout << vec[2] << endl;
+    cout << vec[3] << endl;
+
     return 0;
-
 }
