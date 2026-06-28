@@ -10,7 +10,6 @@ int main () {
     vector<int> vec1;
     cout << "vec1 (empty) size: " << vec1.size() << endl;
 
-    // 2. Fill constructor: Creates a vector with n elements, each initialized to a value.
     vector<int> vec2(5, 100); // 5 integers, all with the value 100.
     cout << "vec2 (filled with 100s): ";
     for (int val : vec2) {
