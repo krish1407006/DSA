@@ -17,6 +17,10 @@ int main() {
         
     // }
 
+
+
+    // brute force approach
+
     int maxsum = INT_MIN;
     for(int st=0; st<n; st++) {
         int currentsum = 0;
