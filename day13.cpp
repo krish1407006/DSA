@@ -27,7 +27,9 @@ int main() {
         for(int end=st; end<n; end++) {
             currentsum += arr[end];
             maxsum = max(currentsum, maxsum);
-        }}
+            if(maxsum < currentsum) {
+                maxsum = currentsum;
+        }}}
             cout<<"Max subarray sum: "<<maxsum<<endl;
 
                 return 0;
