@@ -21,15 +21,13 @@ int main() {
     for(int st=0; st<n; st++) {
         int currentsum = 0;
         for(int end=st; end<n; end++) {
-            currentsum = currentsum + arr[end];
-            if(currentsum > maxsum) {
-                maxsum = currentsum;
-            }
-          
-            cout<<maxsum<<" ";
-            cout<<endl;
-        }
-    }
+            currentsum += arr[end];
+            maxsum = max(currentsum, maxsum);
+        }}
+            cout<<"Max subarray sum: "<<maxsum<<endl;
+
+                return 0;
+    
 
 
     
