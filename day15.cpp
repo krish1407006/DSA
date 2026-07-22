@@ -1,34 +1,37 @@
 #include <iostream>
-
 using namespace std;
 
-struct Node {
-    int data;
-    Node* next;
-
-    Node(int value) : data(value), next(nullptr) {}
-};
-
-class LinkedListQueue {
+class QueueUsingArray {
 private:
-    Node* front;
-    Node* rear;
+    int arr[5];
+    int front;
+    int rear;
+    int size;
 
 public:
-    LinkedListQueue() : front(nullptr), rear(nullptr) {}
+    QueueUsingArray() : front(-1), rear(-1), size(0) {}
 
     bool isEmpty() const {
-        return front == nullptr;
+        return size == 0;
+    }
+
+    bool isFull() const {
+        return size == 5;
     }
 
     void enqueue(int value) {
-        Node* newNode = new Node(value);
-        if (rear == nullptr) {
-            front = rear = newNode;
+        if (isFull()) {
+            cout << "Queue is full. Cannot enqueue." << endl;
             return;
         }
-        rear->next = newNode;
-        rear = newNode;
+
+        if (isEmpty()) {
+            front = 0;
+        }
+
+        rear = (rear + 1) % 5;
+        arr[rear] = value;
+        size++;
     }
 
     int dequeue() {
@@ -37,13 +40,15 @@ public:
             return -1;
         }
 
-        Node* temp = front;
-        int value = temp->data;
-        front = front->next;
-        if (front == nullptr) {
-            rear = nullptr;
+        int value = arr[front];
+        if (size == 1) {
+            front = -1;
+            rear = -1;
+        } else {
+            front = (front + 1) % 5;
         }
-        delete temp;
+
+        size--;
         return value;
     }
 
@@ -52,25 +57,18 @@ public:
             cout << "Queue is empty. No front element." << endl;
             return -1;
         }
-        return front->data;
-    }
-
-    ~LinkedListQueue() {
-        while (!isEmpty()) {
-            dequeue();
-        }
+        return arr[front];
     }
 };
 
 int main() {
-    LinkedListQueue q;
+    QueueUsingArray q;
 
     q.enqueue(10);
     q.enqueue(20);
     q.enqueue(30);
 
     cout << "Front element: " << q.peek() << endl;
-
     cout << "Dequeued: " << q.dequeue() << endl;
     cout << "Dequeued: " << q.dequeue() << endl;
 
@@ -83,3 +81,4 @@ int main() {
 
     return 0;
 }
+
