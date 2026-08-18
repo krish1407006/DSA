@@ -9,6 +9,8 @@ int main()
    
     // vector<int> vec (5, 0);
 
+    
+
     vector<char> vec = {'a','b','c','d'};
 
     cout <<"size :" << vec.size() << endl;
@@ -20,5 +22,6 @@ int main()
     for (char val: vec) {
         cout<< val << endl;
     }
+
     return 0;
 }
