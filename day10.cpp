@@ -10,6 +10,7 @@ using namespace std;
 //     return -1;
 // }
 // int main () {
+
 //     int arr[] = {1, 2, 3, 4, 5};
 //     int size = 5;
 //    cout << "Enter the element to search: ";
